@@ -24,3 +24,20 @@ export interface ListRecord {
   };
   grades: number[];
 }
+
+export interface FiltersProps {
+  onFilterChange: (keyword: string, order: "asc" | "desc" | "") => void;
+}
+
+export interface FiltersState {
+  keyword: string;
+  order: "asc" | "desc" | "";
+}
+
+export interface ListProps {
+  data: ListRecord[]
+}
+
+export interface ListItemErrorBoundaryState {
+  hasError: boolean
+}
